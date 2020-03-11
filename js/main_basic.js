@@ -16,26 +16,22 @@ $(document).ready(function() {
 	    $(this).attr('id', pairs[i]);//sets id in DOM for cards, access styles via css
 	});
 	
-	$('#cardN').bind('keypress', function (e) {
-		var nCard = parseInt($(this).val()) || 0;
-		$(this).val('');
-		if (nCard > 0 && nCard <= 20) {
-			elemCard = $(".card-container:nth-of-type(" + nCard + ")");		
-			nCard = nCard -1;
-		} else {
-			return;
-		}
+	$('.card-container').click(function () {
+		
+		elemCard = $(this);		
 
 		if (!running) {
 			if (!gameStarted) { // If the game has not started and we press a valid number, we show all cards
 				showAllCards();
 			} else if (elemCard.find('.back').attr('id') == chosenCards[0] && chosenCards[1] == null && elemCard.hasClass('flip')) {
 				turnCard(null);
-			} else if (chosenCards[0] == null && chosenCards[1] == null && !elemCard.hasClass('flip')) {
-				turnCard(elemCard.find('.back').attr('id')); // turnning First card
-			} else if (chosenCards[0] != null && chosenCards[1] == null && !elemCard.hasClass('flip')) {
-				turnCard(elemCard.find('.back').attr('id'), 1); // turnning Second card
-				checkMatch();				
+			} else if (chosenCards[1] == null && !elemCard.hasClass('flip')) {
+				if (chosenCards[0] == null) {
+					turnCard(elemCard.find('.back').attr('id')); // turnning First card	
+				} else {
+					turnCard(elemCard.find('.back').attr('id'), 1); // turnning Second card
+					checkMatch();
+				}	
 			}
 		}
 	});
@@ -76,7 +72,7 @@ $(document).ready(function() {
 	}
 
 	function turnBackWrongMatch() {
-		setTimeout(function () {//flip back the chosen cards that did not match
+		setTimeout(function () {
 			$('*[id*=' + chosenCards[0] + ']').each(function () {
 				$(this).closest('.flip').toggleClass('flip');
 			});
@@ -105,7 +101,7 @@ $(document).ready(function() {
 		if (chosenCards[0] == chosenCards[1]) {
 			pairCount++;
 			checkWin();
-		} else { //if the brands did not match - empty the chosenCards & flip the cards back over 					
+		} else { 					
 			turnBackWrongMatch()
 		}
 	}
