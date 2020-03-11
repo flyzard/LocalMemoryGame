@@ -1,0 +1,172 @@
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #1abc9c;
+}
+
+h2 {
+  color: #1abc9c;
+}
+
+h3 {
+  color: #1abc9c;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.menu {
+  text-align: end;
+  padding: 40px 0;
+}
+
+.content {
+  display: grid | inline-grid;
+  border-radius: 5px;
+  background-color: azure;
+  padding: 20px;
+}
+
+.centered-box {
+  border: 5px solid #1abc9c;
+  width: 300px;
+  padding: 10px 40px 40px 40px;
+  margin: auto;
+}
+
+.box {
+  border: 5px solid #1abc9c;
+  width: all;
+  margin: 1rem;
+  padding: 10px 40px 40px 40px;
+}
+
+.body_sec { 
+    margin-left:20px; 
+} 
+
+
+.topnav {
+  height: 100px;
+  overflow: hidden;
+  width: 100%;
+  border-bottom: 5px solid #1abc9c;
+}
+
+.topnav a {
+  color: #1abc9c;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  text-decoration: line-through;
+}
+
+.topnav a.active {
+  text-decoration: underline;
+  color: #1abc9c;
+}
+
+.logo {
+  padding-left: 1rem;
+}
+
+.title {
+  color: #1abc9c;
+  margin: 0.5em 0 0.3em 0;
+}
+
+.subtitle {
+  font-size: 12px;
+}
+
+
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+button {
+  width: 100%;
+  text-align: center;
+  background-color: #1abc9c;
+  color: white;
+  padding: 12px 20px;
+  margin: 14px 0 8px 0;
+  display: inline-block;
+  border: none;
+}
+
+/* Add a background color to the submit button on mouse-over */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.input-field {
+  margin: 1rem 0;
+}
+
+.game-table {
+  padding: 1rem;
+  margin: auto;
+}
+
+.game-table thead {
+  background-color: #1abc9c;
+  color: white;
+  
+}
+
+.game-table thead th {
+  padding: 10px;
+}
+
+.game-table tbody td {
+  padding: 10px;
+}
+
+.game-table a {
+  color: #1abc9c;
+  text-decoration: none;
+  border-bottom: 2px solid ;
+}
+
+.playboard {
+  display: grid;
+
+}
+
+footer { 
+    width: 100%; 
+    bottom: 0px; 
+    background-color: #1abc9c; 
+    color: #fff; 
+    position: absolute; 
+    padding:20px; 
+}
