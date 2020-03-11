@@ -19,17 +19,18 @@ $(document).ready(function() {
 	$('.card-container').click(function () {
 		
 		elemCard = $(this);		
-
+		var backId = elemCard.find('.back').attr('id');
 		if (!running) {
 			if (!gameStarted) { // If the game has not started and we press a valid number, we show all cards
 				showAllCards();
-			} else if (elemCard.find('.back').attr('id') == chosenCards[0] && chosenCards[1] == null && elemCard.hasClass('flip')) {
+			} else if (backId == chosenCards[0] && chosenCards[1] == null && elemCard.hasClass('flip')) {
 				turnCard(null);
+				console.log("isto");
 			} else if (chosenCards[1] == null && !elemCard.hasClass('flip')) {
 				if (chosenCards[0] == null) {
-					turnCard(elemCard.find('.back').attr('id')); // turnning First card	
+					turnCard(backId); // turnning First card	
 				} else {
-					turnCard(elemCard.find('.back').attr('id'), 1); // turnning Second card
+					turnCard(backId, 1); // turnning Second card
 					checkMatch();
 				}	
 			}
