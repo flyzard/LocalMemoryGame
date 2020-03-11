@@ -1,0 +1,120 @@
+.playboard {
+	width: 600px;
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+.card-container {
+	width: 18%;
+	float: left;
+	height: 20%;
+	margin: 1%;
+	cursor: pointer;
+}
+
+.card {
+	webkit-transition: 0.6s;
+	-moz-transition: 0.6s;
+	transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	height: 100%;
+	position: relative;
+}
+
+.card .front {
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	background: #1abc9c;
+	float: left;
+}
+
+.card .back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    border: 1px solid #E8E8E8;
+    float: left;
+    background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+.card .front, .card .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -ms-backface-visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: lightgrey 0 6px 4px;
+}
+
+.card-container.flip .card {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+#D2 { background-image: url("../img/2D.jpg"); }
+#H2 { background-image: url("../img/2H.jpg"); }
+#S2 { background-image: url("../img/2S.jpg"); }
+#C3 { background-image: url("../img/3C.jpg"); }
+#D3 { background-image: url("../img/3D.jpg"); }
+#H3 { background-image: url("../img/3H.jpg"); }
+#S3 { background-image: url("../img/3S.jpg"); }
+#C4 { background-image: url("../img/4C.jpg"); }
+#D4 { background-image: url("../img/4D.jpg"); }
+#H4 { background-image: url("../img/4H.jpg"); }
+#S4 { background-image: url("../img/4S.jpg"); }
+#C5 { background-image: url("../img/5C.jpg"); }
+#D5 { background-image: url("../img/5D.jpg"); }
+#H5 { background-image: url("../img/5H.jpg"); }
+#S5 { background-image: url("../img/5S.jpg"); }
+#C6 { background-image: url("../img/6C.jpg"); }
+#D6 { background-image: url("../img/6D.jpg"); }
+#H6 { background-image: url("../img/6H.jpg"); }
+#S6 { background-image: url("../img/6S.jpg"); }
+#C7 { background-image: url("../img/7C.jpg"); }
+#D7 { background-image: url("../img/7D.jpg"); }
+#H7 { background-image: url("../img/7H.jpg"); }
+#S7 { background-image: url("../img/7S.jpg"); }
+#C8 { background-image: url("../img/8C.jpg"); }
+#D8 { background-image: url("../img/8D.jpg"); }
+#H8 { background-image: url("../img/8H.jpg"); }
+#S8 { background-image: url("../img/8S.jpg"); }
+#C9 { background-image: url("../img/9C.jpg"); }
+#D9 { background-image: url("../img/9D.jpg"); }
+#H9 { background-image: url("../img/9H.jpg"); }
+#S9 { background-image: url("../img/9S.jpg"); }
+#C10 { background-image: url("../img/10C.jpg"); }
+#D10 { background-image: url("../img/10D.jpg"); }
+#H10 { background-image: url("../img/10H.jpg"); }
+#S10 { background-image: url("../img/10S.jpg"); }
+#AC { background-image: url("../img/AC.jpg"); }
+#AD { background-image: url("../img/AD.jpg"); }
+#AH { background-image: url("../img/AH.jpg"); }
+#AS { background-image: url("../img/AS.jpg"); }
+#JC { background-image: url("../img/JC.jpg"); }
+#JD { background-image: url("../img/JD.jpg"); }
+#JH { background-image: url("../img/JH.jpg"); }
+#JS { background-image: url("../img/JS.jpg"); }
+#KC { background-image: url("../img/KC.jpg"); }
+#KD { background-image: url("../img/KD.jpg"); }
+#KH { background-image: url("../img/KH.jpg"); }
+#KS { background-image: url("../img/KS.jpg"); }
+#QC { background-image: url("../img/QC.jpg"); }
+#QD { background-image: url("../img/QD.jpg"); }
+#QH { background-image: url("../img/QH.jpg"); }
+#QS { background-image: url("../img/QS.jpg"); }

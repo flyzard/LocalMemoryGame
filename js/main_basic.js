@@ -4,9 +4,6 @@ $(document).ready(function() {
     $(".playboard").height( $(window).height() * 0.9 );
   }
 	
-	// var cards = ['D2', 'H2', 'S2', 'C3', 'D3', 'H3', 'S3', 'C4', 'D4', 'H4', 'S4', 'C5', 'D5', 'H5', 'S5', 'C6', 'D6', 'H6', 'S6', 'C7', 'D7', 'H7', 'S7', 'C8', 'D8', 'H8', 
-	// 	'S8', 'C9', 'D9', 'H9', 'S9', 'C10', 'D10', 'H10', 'S10', 'AC', 'AD', 'AH', 'AS', 'JC', 'JD', 'JH', 'JS', 'KC', 'KD', 'KH', 'KS', 'QC', 'QD', 'QH', 'QS'];
-
 	var cards = ['S5', 'D6', 'C7', 'H8', 'S9', 'D10', 'AC', 'JH', 'KS', 'QD'];
 
 	var pairs = cards.concat(cards); //create pairs of cards
