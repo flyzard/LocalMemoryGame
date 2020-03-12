@@ -18,7 +18,8 @@
     <div class="column">
       <div class="logo">
         <h1 class="title">Jogo da Memória</h1>
-        <span class="subtitle">Projecto ITW 2020 | Grupo 33</span>
+        <span id="welcome"></span>
+        <!-- <span class="subtitle">Projecto ITW 2020 | Grupo 33</span> -->
       </div>
     </div>
     <div class="column menu">
@@ -33,7 +34,7 @@
       <div class="row">
         <div class="column">
           <h3 style="text-align: center;">Últimos resultados</h3>
-          <table class="game-table">
+          <table id="last-results-table" class="game-table">
             <thead>
               <tr>
                 <th>Tempo</th>
@@ -43,22 +44,14 @@
             </thead>
             <tbody>
               <tr>
-                <td>187 s</td>
-                <td>Simples</td>
-                <td>18-03-2020</td>
-              </tr>
-
-              <tr>
-                <td>137 s</td>
-                <td>Simples</td>
-                <td>19-03-2020</td>
+                
               </tr>
             </tbody>
           </table>
         </div>
         <div class="column">
           <h3 style="text-align: center;">Estatísticas</h3>
-          <table class="game-table">
+          <table id="stats-table" class="game-table">
             <thead>
               <tr>
                 <th>Tipo de jogo</th>
@@ -69,17 +62,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>Simples</td>
-                <td>157 s</td>
-                <td>187 s</td>
-                <td>117 s</td>
-              </tr>
-
-              <tr>
-                <td>Triplas</td>
-                <td>157 s</td>
-                <td>187 s</td>
-                <td>117 s</td>
+                
               </tr>
             </tbody>
           </table>
@@ -94,11 +77,9 @@
       <p>Projecto de ITW | Grupo 33</p>
     </div>
   </footer>
-  <script src="./js/vendor/modernizr-3.8.0.min.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script> -->
-  <!-- <script src="./js/main.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./js/loggedin.js"></script>
+  <script src="./js/stats.js"></script>
 </body>
 
 </html>

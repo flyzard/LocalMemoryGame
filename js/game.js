@@ -9,6 +9,9 @@ $(document).ready(function() {
 	var pairCount = 0;
 	var audio = document.getElementById("audio");
 	var elemCard = null;
+	var seconds = 0;
+	var elSeconds = document.getElementById('clock');
+	var timer = null;
 
 	shuffleArray(pairs);//shuffle cards
 	
@@ -61,6 +64,7 @@ $(document).ready(function() {
 			flipAll();
 			gameStarted = true;
 			running = false;
+			incrementSeconds();
 		}, 2000);
 	}
 
@@ -95,7 +99,9 @@ $(document).ready(function() {
 	}
 
 	function displayWin() {
-		alert("you win :D");
+		clearInterval(timer);
+		recordStats(seconds);
+		alert("Boa! Terminaste em " + seconds + " segundos.");
 	}
 
 	function checkMatch() {
@@ -106,4 +112,24 @@ $(document).ready(function() {
 			turnBackWrongMatch()
 		}
 	}
+
+	function incrementSeconds() {
+		timer = setInterval(function() {
+			seconds += 1;
+			elSeconds.innerText = "Tempo de jogo: " + seconds;	
+		}, 1000);
+	}
+
+	function recordStats(seconds) {
+		var email = sessionStorage.getItem('email');
+		if (email !== undefined) {
+			var user = localStorage.getItem(email);
+			if (user !== undefined) {
+				user = JSON.parse(user);
+				user.stats.push({ game: "Simple 20", time: seconds, date: Date.now()});
+				localStorage.setItem(email, JSON.stringify(user));
+			}
+		}
+	}
+
 });
